@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coding Problem Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Competitive Coding Problem Tracker</h1>
+
+  <form id="problemForm">
+    <input type="text" id="name" placeholder="Problem Name" required />
+    <input type="text" id="platform" placeholder="Platform (LeetCode)" required />
+    <select id="difficulty">
+      <option>Easy</option>
+      <option>Medium</option>
+      <option>Hard</option>
+    </select>
+    <select id="status">
+      <option>Solved</option>
+      <option>In Progress</option>
+      <option>To-Do</option>
+    </select>
+    <input type="text" id="tags" placeholder="Tags (comma separated)" />
+    <button type="submit">Add Problem</button>
+  </form>
+
+  <table id="problemTable">
+    <thead>
+      <tr>
+        <th>Name</th><th>Platform</th><th>Difficulty</th><th>Status</th><th>Tags</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Stats</h2>
+  <canvas id="statusChart" width="400" height="200"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
